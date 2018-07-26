@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="cognitivo" id="Project_3118fc7" template="Default" database="SqlServer" >
+	<schema name="cognitivo" schemaname="cognitivo" >
+		<table name="comp_boss" >
+			<column name="id" type="int" jt="4" mandatory="y" />
+			<column name="component_id" type="int" length="25" jt="4" />
+			<column name="connection_type_id" type="int" length="25" jt="4" />
+			<column name="outside_shape" type="varchar" length="30" jt="12" />
+			<column name="base_type" type="varchar" length="100" jt="12" />
+			<column name="height_over_tube" type="numeric" length="8" decimal="1" jt="2" />
+			<column name="bolt_pattern_long" type="numeric" length="8" decimal="1" jt="2" />
+			<column name="bolt_pattern_wide" type="numeric" length="8" decimal="1" jt="2" />
+			<column name="groove" type="varchar" length="5" jt="12" />
+			<column name="base_diameter" type="numeric" length="8" decimal="1" jt="2" />
+			<column name="shoulder_diameter" type="numeric" length="8" decimal="1" jt="2" />
+			<column name="unique_feature" type="varchar" length="5" jt="12" />
+			<column name="orientation" type="varchar" length="5" jt="12" />
+			<column name="weight" type="numeric" length="8" decimal="1" jt="2" />
+			<index name="Pk_comp_boss_id" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="Unq_comp_boss_component_id" unique="UNIQUE" >
+				<column name="component_id" />
+			</index>
+			<index name="Unq_comp_boss_connection_type_id" unique="UNIQUE" >
+				<column name="connection_type_id" />
+			</index>
+		</table>
+		<table name="component_type" >
+			<column name="id" type="int" jt="4" mandatory="y" autoincrement="y" />
+			<column name="component_type_id" type="varchar" length="25" jt="12" />
+			<column name="component_type" type="varchar" length="50" jt="12" />
+			<index name="Pk_component_type_id" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_component_type_comp_boss" to_schema="cognitivo" to_table="comp_boss" >
+				<fk_column name="id" pk="component_id" />
+			</fk>
+		</table>
+		<table name="connection_type" >
+			<column name="id" type="int" jt="4" mandatory="y" autoincrement="y" />
+			<column name="connection_type_id" type="varchar" length="25" jt="12" />
+			<index name="Pk_connection_type_id" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_connection_type_comp_boss" to_schema="cognitivo" to_table="comp_boss" >
+				<fk_column name="id" pk="connection_type_id" />
+			</fk>
+		</table>
+	</schema>
+	<layout name="Default Layout" id="Layout_24ea414" show_relation="columns" >
+		<entity schema="cognitivo" name="comp_boss" color="bcd5f1" x="240" y="165" />
+		<entity schema="cognitivo" name="component_type" color="bcd5f1" x="45" y="210" />
+		<entity schema="cognitivo" name="connection_type" color="bcd5f1" x="180" y="45" />
+	</layout>
+</project>
