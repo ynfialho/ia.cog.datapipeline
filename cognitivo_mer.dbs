@@ -130,6 +130,6 @@
 		<entity schema="cognitivo" name="tube_assembly" color="bcd5f1" x="435" y="45" />
 		<entity schema="cognitivo" name="materials" color="bcd5f1" x="450" y="210" />
 		<entity schema="cognitivo" name="price_quote" color="bcd5f1" x="630" y="105" />
-		<entity schema="cognitivo" name="supplier" color="bcd5f1" x="810" y="135" />
+		<entity schema="cognitivo" name="supplier" color="bcd5f1" x="600" y="345" />
 	</layout>
 </project>
