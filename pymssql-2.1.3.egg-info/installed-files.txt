@@ -1,0 +1,7 @@
+../_mssql.cpython-36m-x86_64-linux-gnu.so
+../pymssql.cpython-36m-x86_64-linux-gnu.so
+PKG-INFO
+SOURCES.txt
+dependency_links.txt
+not-zip-safe
+top_level.txt
