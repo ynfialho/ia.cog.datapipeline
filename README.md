@@ -30,4 +30,5 @@ python3.6 orquestrador.py
 
 ## Modelagem
 
+
 ![alt](https://github.com/ynfialho/ia.cog.datapipeline/blob/develop/mer.JPG)
