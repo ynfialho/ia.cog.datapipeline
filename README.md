@@ -8,7 +8,7 @@ Nesse desafio foi utilizado um AWS RDS SQL Server 2017 para armazenar os dados, 
 
 ----------
 ## Como executar
-Para executar o programa é necessario ter o python 3.6 instalado e editar o arquivo conf.json com os seguintes dados:
+Para executar o programa é necessario ter o python 3.6 instalado(assumindo que sua python environ seja python3.6 também) e editar o arquivo conf.json com os seguintes dados:
 
 * `server`: endereço do servidor do banco (aqui foi utilizado um AWS RDS).
 * `db`: nome da base de dados.
